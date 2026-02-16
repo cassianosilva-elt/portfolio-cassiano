@@ -1,13 +1,45 @@
+import { ArrowUp, Github, Linkedin } from 'lucide-react'
+
 export default function Footer() {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
     return (
-        <footer style={{ padding: '4rem 0', borderTop: '1px solid #eee' }}>
-            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.7rem', color: '#999', letterSpacing: '0.1em' }}>
-                    © {new Date().getFullYear()} CASSIANO SILVA
-                </span>
-                <div style={{ display: 'flex', gap: '2rem' }}>
-                    <a href="https://github.com/cassianosilva-elt" target="_blank" rel="noreferrer" style={{ fontSize: '0.7rem', fontWeight: 700 }}>GITHUB</a>
-                    <a href="https://linkedin.com/in/mouracassiano" target="_blank" rel="noreferrer" style={{ fontSize: '0.7rem', fontWeight: 700 }}>LINKEDIN</a>
+        <footer className="footer">
+            <div className="container">
+                <div className="footer-content">
+                    <span className="footer-copy">
+                        © {new Date().getFullYear()} CASSIANO SILVA
+                    </span>
+
+                    <div className="footer-links">
+                        <a
+                            href="https://github.com/cassianosilva-elt"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="footer-social-link"
+                            aria-label="GitHub de Cassiano Silva"
+                        >
+                            GITHUB
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/mouracassiano"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="footer-social-link"
+                            aria-label="LinkedIn de Cassiano Silva"
+                        >
+                            LINKEDIN
+                        </a>
+                        <button
+                            className="footer-back-top"
+                            onClick={scrollToTop}
+                            aria-label="Voltar ao topo"
+                        >
+                            <ArrowUp size={16} />
+                        </button>
+                    </div>
                 </div>
             </div>
         </footer>
