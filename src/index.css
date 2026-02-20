@@ -1649,6 +1649,18 @@ section[id] {
     cursor: auto;
   }
 
+  /* Fix cursor on all interactive elements for touch/mobile */
+  .btn-primary,
+  .btn-outline,
+  .theme-toggle,
+  .btn-back,
+  .submit-btn,
+  .footer-back-top,
+  .testimonial-dot,
+  .scroll-to-top {
+    cursor: pointer;
+  }
+
   .container {
     padding: 0 1.25rem;
   }
@@ -1746,6 +1758,10 @@ section[id] {
     grid-row: auto;
   }
 
+  .projects-grid {
+    gap: 4rem;
+  }
+
   .project-card {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1777,6 +1793,11 @@ section[id] {
     font-size: 2.5rem;
   }
 
+  .contact-email {
+    font-size: 1.1rem;
+    word-break: break-all;
+  }
+
   .footer-content {
     flex-direction: column;
     gap: 1.5rem;
@@ -1784,8 +1805,29 @@ section[id] {
   }
 
   /* CV responsive */
+  .cv-overlay {
+    padding: 1rem;
+  }
+
+  .cv-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  .cv-controls .btn-primary,
+  .cv-controls .btn-back {
+    justify-content: center;
+    text-align: center;
+  }
+
   .cv-paper {
     padding: 1.5rem;
+  }
+
+  .cv-name {
+    font-size: 1.8rem;
+    word-break: break-word;
   }
 
   .cv-main-grid {
@@ -1806,11 +1848,26 @@ section[id] {
   .cv-contact-item {
     justify-content: center;
   }
+
+  .cv-exp-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-tagline {
     font-size: 0.95rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .hero-cta .btn-primary,
+  .hero-cta .btn-outline {
+    width: 100%;
+    justify-content: center;
   }
 
   .about-text p {
@@ -1827,28 +1884,88 @@ section[id] {
     gap: 0.75rem;
   }
 
+  .projects-grid {
+    gap: 3rem;
+  }
+
   .testimonial-card {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .testimonial-text {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .project-number {
     font-size: 3rem;
   }
+
+  .contact-section {
+    padding: 5rem 0;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-email {
+    font-size: 0.95rem;
+  }
+
+  /* CV small screen refinements */
+  .cv-overlay {
+    padding: 0.5rem;
+  }
+
+  .cv-paper {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .cv-name {
+    font-size: 1.5rem;
+  }
+
+  .cv-section-title {
+    font-size: 0.65rem;
+  }
+
+  .cv-exp-company {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 375px) {
-  .hero-cta {
-    flex-direction: column;
+  .container {
+    padding: 0 1rem;
   }
 
-  .hero-cta .btn-primary,
-  .hero-cta .btn-outline {
-    width: 100%;
-    justify-content: center;
+  .hero-name {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .timeline-item {
+    padding: 1rem;
+  }
+
+  .cv-name {
+    font-size: 1.3rem;
+  }
+
+  .cv-paper {
+    padding: 0.75rem;
   }
 }
 
